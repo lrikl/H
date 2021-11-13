@@ -51,14 +51,14 @@
 // arrayFill('x', 5);
 
 //#8
-const arr = [2, 2, 1, 2, 3, 1, 2, 5, 3, 9];
-let num = 0;
-let i;
-for(i = 0; i < arr.length; i++) {
-    num += arr[i];
-    if(num > 10) break;
-}
-console.log(`Нужны первые ${i+1} элементов чтобы их сумма была > 10`);
+// const arr = [2, 2, 1, 2, 3, 1, 2, 5, 3, 9];
+// let num = 0;
+// let i;
+// for(i = 0; i < arr.length; i++) {
+//     num += arr[i];
+//     if(num > 10) break;
+// }
+// console.log(`Нужны первые ${i+1} элементов чтобы их сумма была > 10`);
 
 //#9
 // const arr = [1, 2, 1, 2, 2, 1, 2, 5, 3, 9];
