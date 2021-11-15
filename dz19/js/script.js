@@ -31,7 +31,7 @@
 // const arr2 = arr.slice(0,3);
 // console.log(arr2);
 
-// #8
+//#8
 // const arr = [1, 2, 3, 4, 5];
 // const arr2 = arr.slice(-2);
 // console.log(arr2);
@@ -65,36 +65,32 @@
 
 //#14
 // const arr =  [5, 6, 7, 8, 9];
-// let sum = arr.reduce((x,item) => {
-//     return x + item;
-// });
+// const sum = arr.reduce((accum,item) => accum + item);
 // console.log(sum);
 
 //#15
 // const arr =  [5, 6, 7, 8, 9];
-// let pow = arr.map((item) => {
-//     return item ** 2;
-// });
+// const pow = arr.map(item => item ** 2);
 // console.log(pow);
 
 //#16
 // const arr =  [1, -3, 5, 6, -7, 8, 9, -11];
 // function negative(arr) {
-//     return arr.filter(x => x < 0);
+//     return arr.filter(item => item < 0);
 // }
 // console.log(negative(arr));
 
 //#17
 // const arr =  [1, -3, 5, 6, -7, 8, 9, -11];
 // function even(arr) {
-//     return arr.filter(x => x % 2 === 0);
+//     return arr.filter(item => item % 2 === 0);
 // }
 // console.log(even(arr));
 
 //#18
 // const arr = ['aaa', 'aaaqqq', 'zzzqq', 'zz', 'qsaa', 'q', 'az'];
 // function leng(arr) {
-//     return arr.filter(x => x.length > 5);
+//     return arr.filter(item => item.length > 5);
 // }
 // console.log(leng(arr));
 
@@ -108,6 +104,6 @@
 //#20
 // const arr = [5, -3, 6, -5, 0, -7, 8, 9];
 // function numNegative(arr) {
-//     return (arr.filter(x => x < 0)).length;
+//     return (arr.filter(item => item < 0)).length;
 // }
 // console.log(numNegative(arr));
