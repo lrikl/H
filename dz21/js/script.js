@@ -55,6 +55,18 @@
 // console.log(fd(arr, el => el.length > 3 ));
 // console.log(arr.find( el => el.length > 3 ));
 
+// find с параметром thisArg ---------------------------
+
+// const arr = ["app", "apple", "foo", "orange"];
+// function fd(arr, cb, thisArg) {
+//     for (let i = 0; i < arr.length; i++) {
+//         if (cb.call(thisArg, arr[i], i)) return arr[i];
+//     }
+//     return undefined;
+// }
+// console.log(fd(arr,(el, arg) => el.length >= 5 && arg === 1));
+// console.log(arr.find((el, arg) => el.length >= 5 && arg === 1));
+
 
 // #4 findIndex()--------------------------------------------------
 
@@ -118,3 +130,17 @@
 
 // console.log(sm(arr, el => typeof el === "number"));
 // console.log(arr.some(el => typeof el === "number"));
+
+// some с параметром thisArg ---------------------------
+
+// const arr = ['a', 'b', 18, 'c', 'd'];
+// function sm(arr, cb, thisArg) {
+//     for (let i = 0; i < arr.length; i++) {
+//         if (cb.call(thisArg, arr[i], i)) return true;
+//     }
+
+//     return false;
+// }
+// console.log(sm(arr,(el, arg) => typeof el !== "string" && arg === 2));
+// console.log(arr.some((el, arg) => typeof el !== "string" && arg === 2));
+
