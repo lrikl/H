@@ -23,7 +23,7 @@
 // #2 lastIndexOf()--------------------------------------------------
 
 // const arr = ['a', 'b', 'c', 'd', 'e', 'a'];
-// function lastIndOf(arr, item, from = arr.length) {
+// function lastIndOf(arr, item, from = arr.length-1) {
 //     if(from > arr.length) from = arr.length;
 //     if(from >= 0) {
 //         for(let i = from; i >= 0; i--) {
@@ -38,8 +38,8 @@
 
 //     return -1;
 // }
-// console.log(lastIndOf(arr, 'a', 0));
-// console.log(arr.lastIndexOf('a', 0));
+// console.log(lastIndOf(arr, 'b', -3));
+// console.log(arr.lastIndexOf('b', -3));
 
 
 // #3 find()--------------------------------------------------
@@ -143,4 +143,3 @@
 // }
 // console.log(sm(arr,(el, arg) => typeof el !== "string" && arg === 2));
 // console.log(arr.some((el, arg) => typeof el !== "string" && arg === 2));
-
