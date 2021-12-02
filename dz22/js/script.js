@@ -22,7 +22,6 @@ console.log(res.increase());
 console.log(res.decrease());
 console.log(res.value());
 
-console.log('-------------------');
 
 console.log(res2.increase()); 
 console.log(res2.increase()); 
