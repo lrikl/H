@@ -1,8 +1,8 @@
 const sum = function() {
   let x1 = 0;
-    return function(x2) {
-      return  x1 += x2;
-    }
+  return function(x2) {
+    return  x1 += x2;
+  }
 }();
 
 
