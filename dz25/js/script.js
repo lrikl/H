@@ -1,17 +1,43 @@
+// рекурсия
+
 const randomNumber = function() {
     const arr = [];
+    function gen() {
+    
+        if(arr.length === 100) return arr;
+        
+        const rNumb = Math.floor(Math.random() * 100) + 1;
 
+        if(arr.indexOf(rNumb) === -1) arr.push(rNumb);
+        return gen();  
+
+    }
+    return gen;
+}();
+
+console.log(randomNumber());
+
+
+// бесконечный цикл ----------------------------------------------
+
+const random = function() {
+    const arr = []
     return function() {
-        for(let i = 0; arr.length < 100; i++) {
+    
+        while(true) {
             
-            let rNumb = Math.floor(Math.random() * 100) + 1;
+            if(arr.length === 100) return arr;
+            
+            const rNumb = Math.floor(Math.random() * 100) + 1;
 
-            if(arr.indexOf(rNumb) > -1) continue;
-
-            arr.push(rNumb);
+            if(arr.indexOf(rNumb) === -1) arr.push(rNumb);  
         }
-        return arr;
     }
 }();
-  
-console.log(randomNumber());
+
+console.log(random());
+
+
+
+
+
