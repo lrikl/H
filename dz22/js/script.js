@@ -1,21 +1,20 @@
-function counter(numb = 0) {
-    let count = numb;
+function counter(count = 0) {
 
-    this.increase = function() {
+  return {
+    increase() {
       return count++;
-    }
-
-    this.decrease = function() {
+    },
+    decrease() {
       return count--;
+    },
+    value() {
+      return count;
     }
-
-    this.value = function() {
-        return count;
-    }
+  }
 }
   
-let res = new counter();
-let res2 = new counter();
+const res = counter();
+const res2 = counter();
 
 console.log(res.increase());
 console.log(res.increase());
