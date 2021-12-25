@@ -1,16 +1,12 @@
 const elemList = document.querySelectorAll('ul li');
+const elemInArray = [];
 
-function elemInArray(list) {
-    const arr = [];
-
-    for(let elem of list) {
-        console.log(elem);
-        arr.push(elem.innerHTML);
-    }
-
-    return arr;
+for (let elem of elemList) {
+    console.log(elem);
+    elemInArray.push(elem.innerHTML);
 }
 
-console.log(elemInArray(elemList));
+console.log(`общее кол-во элементов: ${elemList.length}`);
+console.log(elemInArray);
 
 
