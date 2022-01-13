@@ -2,30 +2,16 @@
     
     const list = document.getElementById('ulId');
     
-    const nameInArray = function(x) {
-        const arr = [];
+    const arrVal = [];
+    const arrName = [];
 
-        for (let i = 0; i < list.attributes.length; i++) {
-            const attribut = list.attributes[i];
-            arr.push(attribut.name);
-
-        }
-        return arr;
+    for(const attr of list.attributes) {
+        arrVal.push(attr.value);
+        arrName.push(attr.name);
     }
 
-    const valueInArray = function(x) {
-        const arr = [];
-
-        for (let i = 0; i < list.attributes.length; i++) {
-            const attribut = list.attributes[i];
-            arr.push(attribut.value);
-
-        }
-        return arr;
-    }
-
-    console.log(nameInArray(list));
-    console.log(valueInArray(list));
+    console.log(arrVal);
+    console.log(arrName);
 
 
     const elem = document.querySelector('ul');
