@@ -10,8 +10,7 @@
             form: null,
             todoItem: null,
             removeBtnAll: null,
-            
-            
+             
             getForm() {
 
                 const form = document.getElementById(this.formId);
@@ -43,7 +42,7 @@
                 
                 document.addEventListener('DOMContentLoaded', this.dataOnLocal.bind(this));
 
-                this.todoItem.addEventListener('change',this.checkTask.bind(this))
+                this.todoItem.addEventListener('change',this.checkTask.bind(this));
                
                 this.todoItem.addEventListener('click', this.removeTask.bind(this));
               
@@ -80,7 +79,7 @@
                 }
                
                 data.itemId = randomId;
-                data.completed = false
+                data.completed = false;
 
                 this.dataInLocal(data);
                 
@@ -97,7 +96,7 @@
                     return;
                 }
                 
-                const addData = JSON.parse(localStorage.getItem(this.formId))
+                const addData = JSON.parse(localStorage.getItem(this.formId));
                 addData.push(data);
 
                 localStorage.setItem(this.formId, JSON.stringify(addData));   
@@ -116,14 +115,13 @@
                 this.completedTask(target.getAttribute('data-item-id'), this.formId, checked);
                 
             },
-
-        
+    
             completedTask(dataId, formId, checked) {
 
                 if(!dataId) throw new Error('No dataId');
             
                 const data = JSON.parse(localStorage.getItem(formId));
-                const index = data.find(item => item.itemId === +dataId)
+                const index = data.find(item => item.itemId === +dataId);
                 
                 index.completed = checked;
 
@@ -156,7 +154,7 @@
 
                 this.todoItem.textContent = '';
 
-                localStorage.removeItem(this.formId)
+                localStorage.removeItem(this.formId);
             },
 
             createTask({title, description, itemId, completed}) {
@@ -194,7 +192,7 @@
 
                 this.getForm();
                 this.getTodo();
-                this.getRemoveBtn()
+                this.getRemoveBtn();
                 this.events();
             }
            
