@@ -54,7 +54,7 @@
 
                 const data = JSON.parse(localStorage.getItem(this.formId));
                 if(data === null) return;
-                
+                console.log(data)
 
                 data.forEach(item => {
                     document.getElementById(this.todoItemsId).prepend(this.createTask(item));
@@ -78,12 +78,12 @@
                 for(const key in data) {
                     if(!data[key].trim().length) throw new Error('Empty data');
                 }
-               
+                console.log(data)
                 data.itemId = randomId;
                 data.completed = false
 
                 this.dataInLocal(data);
-
+                
                 document.getElementById(this.todoItemsId).prepend(this.createTask(data));
 
                 event.target.reset();
@@ -107,6 +107,12 @@
          
                 const checked = target.checked;
 
+                if(!!checked) {
+                    target.closest('.taskWrapper').classList.add('check');
+                }else {
+                    target.closest('.taskWrapper').classList.remove('check');
+                }
+                
                 this.completedTask(target.getAttribute('data-item-id'), this.formId, checked);
                 
             },
@@ -155,11 +161,16 @@
 
             createTask({title, description, itemId, completed}) {
                
-
                 const div = document.createElement('div');
                 div.classList.add('col-4');
 
-                let content =  `<div class="taskWrapper">`;
+                let content;
+
+                if(!!completed) {
+                   content =  `<div class="taskWrapper check">`;
+                } else {
+                    content =  `<div class="taskWrapper">`;
+                }
                 content += `<div class="taskHeading">${title}</div>`;
                 content += `<div>`;
                 content += `<div class="taskDescription">${description}</div>`;

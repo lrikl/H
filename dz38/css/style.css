@@ -21,3 +21,9 @@
 .ml-auto {
     margin-left: auto;
 }
+
+.check {
+    opacity: 0.75;
+    color: white;
+    background-color: #79c879;
+}
