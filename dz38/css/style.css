@@ -27,3 +27,8 @@
     color: white;
     background-color: #79c879;
 }
+
+.check-item {
+    display: inline-block;
+    cursor: pointer;
+}
