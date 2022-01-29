@@ -107,7 +107,7 @@
                 
                 const checked = target.checked;
 
-                if(checked) {
+                if(!!checked) {
                     target.closest('.taskWrapper').classList.add('check');
                 }else {
                     target.closest('.taskWrapper').classList.remove('check');
